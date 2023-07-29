@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <style>
+            #fig{
+                outline: 1px solid green;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="fig-title"></h2>
+    <!-- Date Filter Inputs -->
+    <div id="date-filter">
+        Start Date: <input type="date" id="start-date" value="2020-01-20">
+        End Date: <input type="date" id="end-date" value="2023-03-22">
+        <button id="apply-filter">Apply Filter</button>
+    </div>
+    <!-- Description for the Filter and Interaction -->
+    <div id="description">
+    Welcome to the interactive data visualization for Covid-19 Death Cases in the US. To get started:
+    <ol>
+        <li>Select the time range you're interested in using the date filter above.</li>
+        <li>Once you've set your preferred dates, click on "Apply Filter" to update the visualization.</li>
+        <li>Hover over any point on the line to see more detailed data for that specific date.</li>
+        <li>Use this tool to gain insights and explore patterns in the data over time.</li>
+    </ol>
+    Dive in and explore!
+
+        <svg id="fig" width="1200" height="600"> </svg>        
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="./fig5.js" type="module"></script>
+    </body>
+</html>

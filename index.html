@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Zhao Li Project for CS416</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      #fig-frame{
+        border: none;
+      }
+      /* Add the new CSS style for larger text */
+      .large-text {
+          font-size: 1.2em;  
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      US Covid Cases and Death During Pandemic
+    </h1>
+    <h2>Zhao Li</h2>
+    <p class="large-text">
+      The Covid-19 Narrative Visualization on United States displays the accumulative <strong>New Cases</strong> and <strong> Death </strong> of Covid-19
+      cases in US <strong>2020-01-20</strong> to
+      <strong>2023-03-22</strong> , we can see the trend of the cases and death trend in US very clearly. 
+    </p>
+    <p class="large-text">
+      We have five buttons at the top of the page. The first button is <strong>Three Waves For New Cases Chart</strong>, which showcases the three distinct waves of new cases. The second button, <strong>Explore New Cases By Time Chart</strong>, lets you delve into new cases over time. The third button is titled <strong>Three Waves For Death Chart</strong> and highlights the three prominent waves of deaths. The fourth button is <strong>Explore New Deaths By Time Chart</strong>, designed to provide insights into the death due to Covid-19 over time. Finally, the fifth button is the <strong>New Cases and Death Chart by States</strong>, which allows you to explore the cumulative cases and deaths in each state.
+    </p>
+    <div class="buttons">
+      <button id="button2" onclick="change('1')">Three Waves For New Cases Chart</button>
+      <button id="button4" onclick="change('4')">Explore New Cases By Time Chart</button>
+      <button id="button1" onclick="change('3')">Three Waves For Death Chart</button>
+      <button id="button1" onclick="change('5')">Explore New Deaths By Time Chart</button>
+      <button id="button5" onclick="change('2')">New Cases and Death Chart by States</button>
+      
+    </div>
+    <iframe id="fig-frame" width="100%" height="800px" src="./fig1.html"></iframe>
+    <script>
+      let iframe = document.getElementById("fig-frame");
+      function change(figId){
+          iframe.src = 'fig'+figId+'.html';
+      }
+    </script>
+  </body>
+</html>
